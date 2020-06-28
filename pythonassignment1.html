@@ -1,0 +1,156 @@
+<html>
+<head>
+<title>  </title>
+</head>
+<body>
+<h1> CS 101 ASSIGNMENT SOLUTION IN PYTHON </h1>
+<h5 style="color:violet;"> Q1 Write a python program to print all even numbers between 1 to 100 in a list</h1>
+
+ 		<h4 style="color:Tomato;"> ANSWER 1</h4>
+<pre>
+			#1st method 
+
+flist =[]
+
+for n in range(1,101):
+     if n%2==0:
+      flist=flist+[n]
+
+print(flist)
+
+
+			#2nd method
+
+
+flist =[]
+
+for n in range(1,101):
+     if n%2==0:
+      flist.append(n)
+
+print(flist)
+
+			#3rd method
+
+numbers = [x for x in range(100) if x % 2 == 0]
+print(numbers)
+
+				#4rth method
+
+
+def f(even, L=[]): 
+
+     for n in range(1,even+1):
+      if n%2==0:  
+        L.append(n)
+     return L
+
+print(f(100))
+
+
+				#5th method
+
+
+number =input("enter your number upto you want even number ")
+even =int(number)
+def f(even, L=[]):
+
+     for n in range(1,even+1):
+      if n%2==0:
+        L.append(n)
+     return L
+
+print(f(even))
+</pre>
+			
+<h6 style="color:violet;"> Q2 Write a python program to print all the factors of a given number.</h6>
+				<h2 style="color:Tomato;"> ANSWER 2 </h2>
+
+
+
+<pre>
+				#1ST METHOD
+
+LIST =[]
+number= 77
+for i in range(1 ,number+1):
+  if number%i==0:
+      LIST.append(i)
+print("ALL THE FACTORS OF 77 ARE ", LIST)
+    
+				#2ND METHOD
+
+
+def factors(number,flist = []):
+    for i in range(1,number+1):
+        if number%i==0:
+            flist=flist+[i]
+    return flist
+print(("ALL THE FACTORS OF 88 ARE ", factors(88))
+   
+				#3RD METHOD
+
+
+number = input("enter your number for finding all factors of it ")
+fac =int(number)
+def factors(fac,flist=[]):
+    for i in range(1,fac+1):
+        if fac%i==0:
+            flist=flist+[i]
+    return flist
+print(factors(fac))
+   
+				#4TH METHOD    
+
+          
+number = input("enter your number for finding all factors of it ")
+fac =int(number)
+
+def factors(fac,i=0,flist=[]):
+    while fac>=i:
+        i+=1
+        if fac%i==0:
+            
+            flist=flist+[i]
+    return flist
+print(factors(fac))
+
+				#5TH METHOD
+
+
+def factors(fac,i=0,flist=[]):
+       print("hi")
+       for i in range(1,fac+1):
+            if fac%2==0:
+                flist.append(i)
+       return flist
+while True:
+    number=input("ENTER YOUR NUMBER FOR THAT YOU WANT FACTORS ")
+    fac=int(number)
+   
+    print(factors(fac))
+
+</pre>
+ <h7 style="color:violet;"> Q3 Write a python program to find the square of the digit of a number </h7>
+			<h2 style="color:Tomato;"> answer 3</h3>
+<pre>
+x = input("enter your number  ")
+sq=0
+s=len(x)
+lis=[]
+for i in range(1,s+1):
+    y=x[i-1:i]
+    r=int(y)
+    sq=sq+r*r
+    lis=lis+[r*r]
+print("this is your number", x,"this is your squre list", lis,"this is squre sum  ",sq)    
+
+
+
+</pre>
+
+
+
+
+</body>
+</html>
